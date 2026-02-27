@@ -1,0 +1,341 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Калистеника — сила своим весом</title>
+  <meta name="description" content="Одностраничный сайт про калистенику: что это, виды, как начать, видео и базовая программа." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <a class="skip-link" href="#what">Перейти к содержанию</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <span class="brand-mark" aria-hidden="true">◼</span>
+        <span class="brand-title">Calisthenics</span>
+      </div>
+
+      <nav class="nav" aria-label="Навигация по разделам">
+        <a href="#what">Что это</a>
+        <a href="#benefits">Польза</a>
+        <a href="#types">Виды</a>
+        <a href="#start">Как начать</a>
+        <a href="#plan">План</a>
+        <button class="btn ghost" id="themeToggle" type="button" aria-pressed="false" title="Переключить тему">
+          🌙
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-text">
+          <p class="kicker">Тренировки без железа. Только ты и гравитация.</p>
+          <h1>Калистеника: сила, контроль, выносливость</h1>
+          <p class="lead">
+            Калистеника (калистоника) — это тренировки с собственным весом: от базовых отжиманий до стойки на руках.
+            Нужны минимум оборудования и максимум дисциплины.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn" href="#start">Начать сегодня</a>
+            <a class="btn ghost" href="#what">Узнать больше</a>
+          </div>
+
+          <div class="stats" aria-label="Ключевые особенности">
+            <div class="stat">
+              <div class="stat-num">0–1</div>
+              <div class="stat-label">оборудования</div>
+            </div>
+            <div class="stat">
+              <div class="stat-num">30</div>
+              <div class="stat-label">минут на старт</div>
+            </div>
+            <div class="stat">
+              <div class="stat-num">∞</div>
+              <div class="stat-label">вариаций упражнений</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-card">
+          <div class="card">
+            <div class="card-header">
+              <h2 class="card-title">Быстрый тест</h2>
+              <p class="card-subtitle">Сколько раз ты сделаешь отжимания за 60 секунд?</p>
+            </div>
+
+            <div class="card-content">
+              <label class="field">
+                <span>Твой результат (раз):</span>
+                <input id="pushupsInput" type="number" min="0" max="300" placeholder="например, 25" />
+              </label>
+
+              <button class="btn" id="calcBtn" type="button">Оценить уровень</button>
+
+              <div class="result" id="result" role="status" aria-live="polite">
+                Введи число и нажми «Оценить уровень».
+              </div>
+
+              <p class="fineprint">
+                Это не медосмотр и не истина. Просто мотивационный ориентир, чтобы тебе было от чего отталкиваться.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="what" class="section">
+      <div class="container section-grid">
+        <div>
+          <h2>Что такое калистеника</h2>
+          <p>
+            Калистеника — это силовая подготовка, где основная нагрузка создаётся собственным весом.
+            Ты развиваешь не только силу, но и контроль над телом: координацию, стабильность, гибкость и выносливость.
+          </p>
+          <ul class="bullets">
+            <li>База: отжимания, подтягивания, приседания, планка.</li>
+            <li>Прогрессии: усложнение через рычаг, паузы, темп, амплитуду.</li>
+            <li>Навыки: стойка на руках, выход силой, фронт- и бэк-левер.</li>
+          </ul>
+        </div>
+
+        <figure class="media">
+          <img src="example.jpg" alt="Пример изображения для секции: калистеника" />
+          <figcaption>Локальная картинка: положи файл <strong>example.jpg</strong> рядом с HTML и CSS.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="benefits" class="section alt">
+      <div class="container">
+        <h2>Почему это полезно</h2>
+
+        <div class="cards">
+          <article class="mini-card">
+            <h3>Сила без травм-аттракциона</h3>
+            <p>Работаешь с телом, учишься стабилизировать суставы и держать технику.</p>
+          </article>
+
+          <article class="mini-card">
+            <h3>Функциональность</h3>
+            <p>Становишься сильнее в движениях, которые реально встречаются в жизни и спорте.</p>
+          </article>
+
+          <article class="mini-card">
+            <h3>Доступность</h3>
+            <p>Турник, пол и немного места. Всё, ты уже “в зале”.</p>
+          </article>
+
+          <article class="mini-card">
+            <h3>Прогресс понятный</h3>
+            <p>Усложняешь вариации: угол, рычаг, темп — и растёшь без вечной гонки за килограммами.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="types" class="section">
+      <div class="container">
+        <h2>Какие бывают виды</h2>
+
+        <div class="split">
+          <div class="panel">
+            <h3>Статическая (isometrics)</h3>
+            <p>Удержания: планка, L-sit, стойка на руках у стены, lever-элементы.</p>
+            <div class="tagrow">
+              <span class="tag">контроль</span>
+              <span class="tag">стабильность</span>
+              <span class="tag">техника</span>
+            </div>
+          </div>
+
+          <div class="panel">
+            <h3>Динамическая</h3>
+            <p>Повторения и связки: подтягивания, отжимания, выход силой, брусья.</p>
+            <div class="tagrow">
+              <span class="tag">сила</span>
+              <span class="tag">выносливость</span>
+              <span class="tag">мышцы</span>
+            </div>
+          </div>
+
+          <div class="panel">
+            <h3>Skills (навыки)</h3>
+            <p>Координационные элементы: handstand, muscle-up, backflip… (шутка, не надо).</p>
+            <div class="tagrow">
+              <span class="tag">баланс</span>
+              <span class="tag">практика</span>
+              <span class="tag">терпение</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="start" class="section alt">
+      <div class="container section-grid">
+        <div>
+          <h2>Как начать</h2>
+          <ol class="steps">
+            <li><strong>Оцени базу:</strong> сколько отжиманий и подтягиваний ты делаешь чисто.</li>
+            <li><strong>Выбери 3 тренировки в неделю:</strong> Full Body или Push/Pull/Legs.</li>
+            <li><strong>Делай прогрессии:</strong> чуть сложнее каждую неделю (повторы, темп, вариации).</li>
+            <li><strong>Техника важнее эго:</strong> качество повторов решает.</li>
+          </ol>
+
+          <div class="note">
+            Минимальный инвентарь: турник (или кольца), резинка, коврик.
+          </div>
+        </div>
+
+        <div class="media">
+          <div class="video-wrap" aria-label="Видео про калистенику с YouTube">
+            <iframe
+              src="https://www.youtube.com/embed/2pLT-olgUJs"
+              title="Calisthenics Beginner Guide"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen>
+            </iframe>
+          </div>
+          <p class="fineprint">
+            Если хочешь — заменишь ссылку в <code>src</code> на любое другое YouTube-видео (формат: <code>/embed/ID</code>).
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="plan" class="section">
+      <div class="container">
+        <h2>Простой план на 2 недели</h2>
+        <p class="lead">
+          3 тренировки в неделю. Отдых между подходами 60–120 секунд. Оставляй 1–2 повтора “в запасе”.
+        </p>
+
+        <div class="table-wrap" role="region" aria-label="План тренировок">
+          <table class="plan">
+            <thead>
+              <tr>
+                <th>День</th>
+                <th>Упражнения</th>
+                <th>Подходы × Повторы</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Тренировка A</td>
+                <td>Отжимания, приседания, планка</td>
+                <td>3×8–15, 3×10–20, 3×30–60с</td>
+              </tr>
+              <tr>
+                <td>Тренировка B</td>
+                <td>Тяга/подтягивания (или резинка), выпады, hollow hold</td>
+                <td>4×5–10, 3×8–12/нога, 3×20–40с</td>
+              </tr>
+              <tr>
+                <td>Тренировка C</td>
+                <td>Брусья/отжимания узкие, ягодичный мост, боковая планка</td>
+                <td>3×6–12, 3×12–20, 3×20–45с/стор</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="cta">
+          <p><strong>Главное:</strong> начинай с того, что можешь делать чисто. Потом усложняй.</p>
+          <a class="btn" href="#what">Вернуться наверх</a>
+        </div>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>© <span id="year"></span> Calisthenics One-Page. Сделано для задания Егора.</p>
+        <p class="fineprint">Если болит “не мышцы”, а суставы — снижай объём и проверяй технику.</p>
+      </div>
+    </footer>
+  </main>
+
+  <script>
+    // 1) Плавный скролл по якорям
+    document.querySelectorAll('a[href^="#"]').forEach(link => {
+      link.addEventListener('click', (e) => {
+        const id = link.getAttribute('href');
+        if (!id || id === '#') return;
+
+        const target = document.querySelector(id);
+        if (!target) return;
+
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+        // чуть-чуть "правильно" для доступности: фокус на секцию
+        target.setAttribute('tabindex', '-1');
+        target.focus({ preventScroll: true });
+      });
+    });
+
+    // 2) Мини-тест по отжиманиям (чисто мотивационный)
+    const input = document.getElementById('pushupsInput');
+    const result = document.getElementById('result');
+    const calcBtn = document.getElementById('calcBtn');
+
+    function classifyPushups(n) {
+      if (!Number.isFinite(n) || n < 0) return null;
+      if (n < 10) return { level: 'Новичок', tip: 'Начни с 3×6–8 отжиманий, добавляй по 1 повтору каждую неделю.' };
+      if (n < 25) return { level: 'База есть', tip: 'Добавь темп (медленнее вниз) и вариации: узкие, ноги повыше.' };
+      if (n < 40) return { level: 'Уверенный уровень', tip: 'Пора в прогрессии: отжимания на брусьях, кольца, паузы.' };
+      return { level: 'Зверь', tip: 'Усложняй механику: псевдо-планш, кольца, weighted (если есть).' };
+    }
+
+    calcBtn.addEventListener('click', () => {
+      const n = Number(input.value);
+      const info = classifyPushups(n);
+      if (!info) {
+        result.textContent = 'Введи корректное число (0 и выше).';
+        result.classList.add('bad');
+        return;
+      }
+
+      result.classList.remove('bad');
+      result.innerHTML = `
+        <strong>Уровень:</strong> ${info.level}<br>
+        <span class="muted">${info.tip}</span>
+      `;
+    });
+
+    // Enter в инпуте = оценить
+    input.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter') calcBtn.click();
+    });
+
+    // 3) Переключатель темы (тёмная/ещё более тёмная — потому что мы взрослые люди)
+    const toggle = document.getElementById('themeToggle');
+    const root = document.documentElement;
+
+    function setTheme(mode) {
+      root.dataset.theme = mode; // "dark" | "darker"
+      localStorage.setItem('theme', mode);
+      toggle.setAttribute('aria-pressed', mode === 'darker');
+      toggle.textContent = mode === 'darker' ? '🧊' : '🌙';
+      toggle.title = mode === 'darker' ? 'Сделать светлее' : 'Сделать темнее';
+    }
+
+    const saved = localStorage.getItem('theme');
+    setTheme(saved === 'darker' ? 'darker' : 'dark');
+
+    toggle.addEventListener('click', () => {
+      setTheme(root.dataset.theme === 'dark' ? 'darker' : 'dark');
+    });
+
+    // 4) Год в футере
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
